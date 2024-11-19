@@ -136,7 +136,7 @@ public class UsersController {
 			returnValue = ex.getLocalizedMessage();
 		}
 
-		return returnValue;
+		return "IP on which service is running -- "+returnValue +;
 	}
 
 }
