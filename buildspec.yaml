@@ -12,6 +12,11 @@ phases:
       - echo Setting environment variables...
       - IMAGE_NAME=users-microservices
       - IMAGE_TAG=latest # Tag the image with a timestamp
+      - mkdir -p target
+      - echo Sample file > target/example.txt
+      - echo Verifying build context...
+      - ls -l
+      - ls -l ./target
       - echo Pre-build phase complete.
 
   build:
@@ -32,3 +37,9 @@ phases:
 
 artifacts:
   files: imagedefinitions.json
+
+
+pre_build:
+  commands:
+    - mkdir -p target
+    - echo Sample file > target/example.txt
