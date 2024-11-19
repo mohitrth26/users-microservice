@@ -11,7 +11,7 @@ phases:
       - echo Starting pre-build phase...
       - echo Setting environment variables...
       - IMAGE_NAME=users-microservices
-      - IMAGE_TAG=$(date +%Y%m%d%H%M%S) # Tag the image with a timestamp
+      - IMAGE_TAG=latest # Tag the image with a timestamp
       - echo Pre-build phase complete.
 
   build:
