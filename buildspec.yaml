@@ -12,6 +12,7 @@ phases:
       - echo Setting environment variables...
       - IMAGE_NAME=users-microservices
       - IMAGE_TAG=latest # Tag the image with a timestamp
+      - mvn clean package
       - mkdir -p target
       - echo Sample file > target/example.txt
       - echo Verifying build context...
