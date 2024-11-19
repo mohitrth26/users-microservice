@@ -119,10 +119,9 @@ public class UsersController {
 
 	@GetMapping("/status/check")
 	public String status(@RequestHeader("Authorization") String authorizationHeader) {
-		String returnValue = "Working on port " + port + " with token " + token + ". Token from environment "
+		String returnValue = "my application working on port " + port + " with token " + token + ". Token from environment "
 				+ environment.getProperty("token.secret") + "authorizationHeader = " + authorizationHeader
-				+ ". My application environment = " + environment.getProperty("myapplication.environment");
-		log.info(returnValue);
+				+ ". My application environment = " + environment.getProperty("myapplication.environment");		log.info(returnValue);
 		return returnValue;
 	}
 
