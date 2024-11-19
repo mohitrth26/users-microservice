@@ -17,6 +17,8 @@ phases:
       - echo Verifying build context...
       - ls -l
       - ls -l ./target
+      - echo current directory
+      - pwd
       - echo Pre-build phase complete.
 
   build:
