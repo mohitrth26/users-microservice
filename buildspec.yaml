@@ -16,7 +16,7 @@ phases:
       - echo Sample file > target/example.txt
       - echo Verifying build context...
       - ls -l
-      - ls -l ./target
+      - ls -l /target
       - echo Pre-build phase complete.
 
   build:
