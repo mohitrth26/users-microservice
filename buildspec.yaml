@@ -37,12 +37,8 @@ phases:
       - echo Docker image pushed successfully.
       - echo Post-build phase complete.
       - printf '[{"name":"%s","imageUri":"%s"}]' $IMAGE_NAME $DOCKERHUB_USERNAME:$IMAGE_TAG > imagedefinitions.json
+      - vi imagedefinitions.json
 
 artifacts:
   files: imagedefinitions.json
-
-
-pre_build:
-  commands:
-    - mkdir -p target
-    - echo Sample file > target/example.txt
+ 
