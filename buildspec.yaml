@@ -36,8 +36,9 @@ phases:
       - docker push ${DOCKERHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
       - echo Docker image pushed successfully.
       - echo Post-build phase complete.
-      - printf '[{"name":"%s","imageUri":"%s"}]' $IMAGE_NAME $DOCKERHUB_USERNAME:$IMAGE_TAG > imagedefinitions.json
-      - vi imagedefinitions.json
+      - echo Generating imagedefinitions.json...
+      - echo '[{"name":"users-microservices-mohit-hub","imageUri":"'${DOCKERHUB_USERNAME}'/'${IMAGE_NAME}':'${IMAGE_TAG}'"}]' > imagedefinitions.json
+      - cat imagedefinitions.json
 
 artifacts:
   files: imagedefinitions.json
